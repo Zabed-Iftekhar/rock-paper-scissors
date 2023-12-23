@@ -20,11 +20,99 @@ function getPlayerChoice(){
     else{
         return playerSelection;
     }
-        
+    
+    
 }
 
 
-let computerSelection=getComputerChoice();
-let playerSelection=getPlayerChoice();
-console.log(`Computer: ${computerSelection}`);
-console.log(`You: ${playerSelection}`);
+
+
+game();
+
+function game(){
+    
+
+    let result=0;
+    
+    
+    
+
+    while(result<5){
+        let computerSelection=getComputerChoice();
+        let playerSelection=getPlayerChoice();
+        
+        
+        console.log(`Computer: ${computerSelection}`);
+        console.log(`You: ${playerSelection}`);
+        result++
+        console.log(`Round ${result} result is : `);
+        playRound(computerSelection,playerSelection);
+       
+   
+}
+}
+
+
+
+
+
+
+function playRound(computerSelection,playerSelection){
+    
+    
+    
+    if (playerSelection==="rock" && computerSelection==="scissors"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}. Rock breaks scissors.
+        You win !`)
+       
+        
+        
+    }
+
+    
+    else if (playerSelection==="scissors" && computerSelection==="rock"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
+        Rock breaks scissors.You lose.`)
+    
+    
+    }
+    
+    else if (playerSelection==="paper" && computerSelection==="scissors"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
+        Scissors cut paper.You lose.`)
+        
+        
+    }
+
+    else if (playerSelection==="scissors" && computerSelection==="paper"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
+        Scissors cut paper.You win!`)
+        
+        
+        
+       
+    }
+    
+    else if (playerSelection==="paper" && computerSelection==="rock"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
+        Paper wraps rock.You win!`)
+        
+        
+    }
+    else if (playerSelection==="rock" && computerSelection==="paper"){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
+        Paper wraps rock.You lose.`)
+        
+        
+    }
+            
+            
+
+    else if (playerSelection===computerSelection){
+        console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}. It\'s a tie ! Try again.`)
+        
+    };
+    
+
+    
+}
