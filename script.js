@@ -19,25 +19,24 @@ function getPlayerChoice(){
     }
     else{
         return playerSelection;
-    }
-    
+    }    
     
 }
 
 
 
+let winner=""
 
 game();
 
 function game(){
-    
+
+    //this function calls playRound() 5 times.
 
     let result=0;
-    
-    
-    
 
     while(result<5){
+        
         let computerSelection=getComputerChoice();
         let playerSelection=getPlayerChoice();
         
@@ -57,23 +56,23 @@ function game(){
 
 
 
+
 function playRound(computerSelection,playerSelection){
     
-    
+    //this function logs if the player has won or the computer has won based on the playerSelection and computerSelection
     
     if (playerSelection==="rock" && computerSelection==="scissors"){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}. Rock breaks scissors.
-        You win !`)
-       
+        You win !`)     
         
-        
+
     }
 
     
     else if (playerSelection==="scissors" && computerSelection==="rock"){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
         Rock breaks scissors.You lose.`)
-    
+        
     
     }
     
@@ -81,28 +80,27 @@ function playRound(computerSelection,playerSelection){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
         Scissors cut paper.You lose.`)
         
-        
     }
 
     else if (playerSelection==="scissors" && computerSelection==="paper"){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
         Scissors cut paper.You win!`)
         
-        
-        
+          
        
     }
     
     else if (playerSelection==="paper" && computerSelection==="rock"){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
         Paper wraps rock.You win!`)
+       
         
         
     }
     else if (playerSelection==="rock" && computerSelection==="paper"){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}.
         Paper wraps rock.You lose.`)
-        
+         
         
     }
             
@@ -111,7 +109,7 @@ function playRound(computerSelection,playerSelection){
     else if (playerSelection===computerSelection){
         console.log(`Computer chose ${computerSelection} and you chose ${playerSelection}. It\'s a tie ! Try again.`)
         
-    };
+    }
     
 
     
