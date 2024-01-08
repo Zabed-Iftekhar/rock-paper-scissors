@@ -87,6 +87,7 @@ button:hover{
         
         margin-top: 50px;
         padding-left: 50px;
+        padding-bottom: 10px;
 }
 
 .footer{
@@ -94,7 +95,7 @@ button:hover{
         
         position:absolute;
         background-color:#18191c ;
-        
+        bottom:0;
         font-size: 15px;
         width:100%;
         height:50px;
